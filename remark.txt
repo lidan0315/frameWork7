@@ -1,0 +1,40 @@
+视图（Views）：
+1、View：在应用中是一个独立的部分，每一个视图都可以有不同的导航栏，工具栏布局和不同的样式。
+2、Views：是所有可见View的容器（不包括Modal和Panel）。Views是你的应用主容器，一个应用中只能有一个Views。
+页面（Pages）：
+1、在main layout（index.html）中，每一个Page都应该放在Pages容器中，而Pages必须是View的子元素。
+2、data-page：每一个page都有一个data-page属性，存储了一个唯一page名，推荐使用；这个属性在page事件中或者在page回调函数中非常有用，帮助我们确定加载的那个页面。
+3、Page内容：所有可见的内容，比如列表和表单等，都应该放在<div class="page-content">中，它是<div class="page">的子元素。
+4、Page数据：$$(document).on('pageInit',function(e){
+                 var page=e.detail.page;
+             })
+Page内部结构
+1、返回到上一页：class="back";
+2、滑动后退：如果你启用了 "swipeBackPage" 应用参数，那么你可以通过从左向右滑动来后退到上一个页面。如果你想在页面中禁用这个行为，
+   这种情况下你只需要加一个 no-swipeback class 即可。
+3、取消/增加页面切换动画：在加载页面后退的时候需要立刻执行，不想要一个切换的动画效果，可以增加一个"no-animation" class在链接上。
+4、如果全局禁用了动画，在某些链接上希望启用这些动画，给链接加上"with-animation" class。
+5、通过data标签配置更多选项：data-reload、data-ignore-cache、data-force、data-animate-pages。。。
+6、通过js加载页面：
+    1)var myApp=new Framework7();
+    2)var mainView=myApp.addView('.view-main')
+    3)mainView.router.loadPage('about.html')。
+7、返回上一页：mainView.router.back()。
+
+动态界面:
+1、你需要使用普通的 <a> 标签，她有一个href属性指向你需要加载的页面。
+2、通过ajax加载的页面不需要有完整的HTML结构。只需要有 <div class="page"> (和 <div class="navbar"> 如果你需要动态的滚动条)
+3、如果你在同一个文件中有多个Page，把他们用 <div class="view"> 包裹起来，并且给每一个View设置好正确的class。
+4、只需给一个链接加上 back class (<a href="index.html" class="back">)，她就会自动变成一个后退链接。
+
+内联界面
+1、默认情况下，内联页面功能是禁用的。如果你想启用，需要传入一个domCache:true参数即可
+var mainView = myApp.addView('.view-main', {
+    domCache: true //enable inline pages
+});
+2、所有的附加页面（非当前显示的页面）都应该有一个额外的 cache 类
+3、当在内联界面中使用动态导航栏时，每一个相关的"navbar-inner"都应该有一个对应的data-page属性
+
+
+
+
