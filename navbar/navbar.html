@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>导航条</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../css/framework7.material.colors.min.css">
+</head>
+<body>
+<!--
+导航栏：是一个固定区域 （在固定和穿透布局类型中）。它位于屏幕顶部，包含页面标题和导航元素。
+    导航栏包含3个部分：左、中、右。每个部分都可以包含任意的HTML内容，但推荐按照如下方式使用：
+    左部 用来放置返回链接、图标以及单独的文字链接。
+    中部 用来显示页面标题和标签链接（即按钮控制）。
+    右部 和左部一样。
+-->
+<!--1、导航栏布局-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">Left</div>
+        <div class="center">Center</div>
+        <div class="right">Right</div>
+    </div>
+</div>
+<!--2、带有链接的导航栏-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link">Left Link</a>
+        </div>
+        <div class="center">Center</div>
+        <div class="right">
+            <a href="#" class="link">Right Link</a>
+        </div>
+    </div>
+</div>
+<!--多个链接-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link">Left1</a>
+            <a href="#" class="link">Left2</a>
+        </div>
+        <div class="center">Center</div>
+        <div class="right">
+            <a href="#" class="link">Right Link</a>
+        </div>
+    </div>
+</div>
+<!--3、含有图标和文本的链接：把链接的文本用<span>元素包起来-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link">
+                <i class="icon icon-back"></i>
+                <span>Back</span>
+            </a>
+        </div>
+        <div class="center">Center</div>
+        <div class="right">
+            <a href="#" class="link">
+                <i class="icon icon-bars"></i>
+                <span>Menu</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--4、只有图标的链接：如果需要含有图标而不含有文本的链接，我们需要对链接添加额外的"icon-only" 类-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link icon-only">
+                <i class="icon icon-back"></i>
+            </a>
+        </div>
+        <div class="center">Center</div>
+        <div class="right">
+            <a href="#" class="link">
+                <i class="icon icon-bars"></i>
+                <span>Menu</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

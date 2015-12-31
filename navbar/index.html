@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>index</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+</head>
+<body>
+<!--
+知识点：
+1、默认情况下，每个导航栏部分都具有渐变过渡特效
+2、给导航栏部分添加sliding类，他会具有滑动特效
+3、with-subnavbar：页面中有二级导航的时候，可以加上
+-->
+<div class="views">
+    <div class="view view-main">
+        <!--Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!-- Left part doesn't related to other pages, let's fade it out -->
+                <div class="left">
+                    <a href="#" class="link">Home Left</a>
+                </div>
+                <div class="center sliding">Home</div>
+                <div class="right sliding">
+                    <a href="help.html" class="link">Help</a>
+                </div>
+
+                <!--Sub Navbar-->
+                <div class="subnavbar">
+                    <div class="buttons-row">
+                        <a href="#tab1" class="button tab-link active">Tab 1</a>
+                        <a href="#tab2" class="button tab-link">Tab 2</a>
+                        <a href="#tab3" class="button tab-link">Tab 3</a>
+                    </div>
+                </div>
+                <!--End of Sub Navbar-->
+            </div>
+        </div>
+        <!--/End of Top Navbar-->
+        <div class="pages navbar-through">
+            <div data-page="index" class="page with-subnavbar">
+                <div class="page-content">
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">
+                            <div class="content-block">
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="content-block">
+                                <p>Donec iaculis ...</p>
+                                <p>Curabitur egestas, mi ...</p>
+                                <p>Donec iaculis posuere ...</p>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab">
+                            <div class="content-block">
+                                <p>Etiam non interdum erat...</p>
+                                <p>Duis ac semper risus. Suspendisse...</p>
+                                <p>Etiam non interdum erat...</p>
+                                <p>Duis ac semper risus. Suspendisse...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Bottom ToolBar-->
+        <div class="toolbar">
+            <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="link">Hello</a>
+                <a href="#" class="link">World</a>
+            </div>
+        </div>
+        <!--/End of Bottom Navbar-->
+    </div>
+</div>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+
+</body>
+</html>

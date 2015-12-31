@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>about</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+</head>
+<body>
+<!--
+知识点：
+1、no-toolbar：在<div data-page="about" class="page">上添加 no-toolbar 类自动隐藏工具栏
+-->
+<div class="views">
+    <div class="view view-main">
+        <!--Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="center sliding">About</div>
+                <div class="right">
+                    <a href="#" class="link icon-only">
+                        <i class="icon icon-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--/End of Top Navbar-->
+        <div class="pages">
+            <div data-page="about" class="page">
+                <div class="page-content">
+                    <p>No matter what label is thrown your way, only you can define yourself.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Bottom ToolBar-->
+        <div class="toolbar">
+            <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="link">Hello</a>
+                <a href="#" class="link">World</a>
+            </div>
+        </div>
+        <!--/End of Bottom Navbar-->
+    </div>
+</div>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+</body>
+</html>

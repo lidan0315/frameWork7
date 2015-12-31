@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>help</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+</head>
+<body>
+<!--
+知识点：
+1、标签栏和工具栏一致，但是他有额外的“tabbar”类
+2、向标签栏图标添加徽章，只需在图标内部放入<span class="badge">
+3、如果使用带有文案的标签栏，需要在标签栏上再加一个“tabbar-labers”类，然后把<span class="tabbar-laber"></span>放在连接中
+4、若是在固定和穿透布局中，则使用 "tabbar-labels-fixed" 或者 "tabbar-labels-through"
+-->
+<div class="views">
+    <div class="view view-main">
+        <!--Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="center sliding">Help</div>
+                <div class="right">
+                    <a href="#" class="link icon-only">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--/End of Top Navbar-->
+        <div class="pages">
+            <div data-page="about" class="page">
+                <div class="page-content">
+                    <p>Lorem ipsum dolor ...</p>
+                    <p>In sed augue non ...</p>
+                    <p>Lorem ipsum dolor ...</p>
+                    <p>In sed augue non ...</p>
+                    <p>Lorem ipsum dolor ...</p>
+                    <p>In sed augue non ...</p>
+                    <p>Lorem ipsum dolor ...</p>
+                    <p>In sed augue non ...</p>
+                    <p>Lorem ipsum dolor ...</p>
+                    <p>In sed augue non ...</p>
+                    <p>Lorem ipsum dolor ...</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Bottom ToolBar-->
+        <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner">
+                <a href="#tab1" class="tab-link active">
+                    <i class="icon demo-icon-1"></i>
+                    <span class="tabbar-label">Label 1</span>
+                </a>
+                <a href="#tab2" class="tab-link">
+                    <i class="icon demo-icon-2">
+                        <span class="badge bg-red">5</span>
+                    </i>
+                    <span class="tabbar-label">Label 2</span>
+                </a>
+                <a href="#tab3" class="tab-link">
+                    <i class="icon demo-icon-3"></i>
+                    <span class="tabbar-label">Label 3</span>
+                </a>
+                <a href="#tab4" class="tab-link">
+                    <i class="icon demo-icon-4">
+                        <span class="badge bg-green">15</span>
+                    </i>
+                    <span class="tabbar-label">Label 4</span>
+                </a>
+            </div>
+        </div>
+        <!--/End of Bottom Navbar-->
+    </div>
+</div>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+</body>
+</html>
