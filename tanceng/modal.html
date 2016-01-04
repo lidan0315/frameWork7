@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Modal</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+</head>
+<body>
+<!--知识点
+1、myApp.alert(text, [callbackOk])
+    text - string. Alert文本
+    title - string. Optional. Alert modal 标题
+    callbackOk - function. Optional.在Alert modal下，当用户点击“Ok”按钮时，回调函数将被执行。
+    该方法返回动态创建的modal的HTML元素。
+
+2、myApp.confirm(text, [callbackOk, callbackCancel])
+    text - string. Confirm 文本
+    title - string. Optional. Confirm modal 标题
+    callbackOk - function. Optional. 在 Confirm modal下，当用户点击“Ok”按钮时，回调函数将被执行。(当用户确认操作）
+    callbackCancel - function. Optional. 在 Confirm modal下，当用户点击“Cancel”按钮时，回调函数将被执行。(当用户不想进行操作)
+    该方法返回动态创建的modal的HTML元素。
+
+3、myApp.prompt(text, [callbackOk, callbackCancel])
+    text - string. Prompt 文本/问题
+    title - string. Optional. Prompt modal 标题
+    callbackOk - function. Optional. 在 Prompt modal下，当用户点击“Ok”按钮时，回调函数将被执行。回调函数的参数是输入框的值
+    callbackCancel - function. Optional. 在 Prompt modal下，当用户点击“Cancel”按钮时，回调函数将被执行。回调函数的参数是输入框的值
+    该方法返回动态创建的modal的HTML元素。
+
+4、Login and Password有两个用来验证的特殊modals :
+
+-->
+<div class="views">
+    <div class="view">
+        <div class="pages">
+            <div data-page="home" class="page navbar-fixed">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center" style="left: 0px;">Alert</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <!--/*modal*/<div class="content-block">-->
+                        <!--<p><a href="#" class="alert-text">Alert With Text</a></p>-->
+                        <!--<p><a href="#" class="alert-text-title">Alert With Text and Title</a></p>-->
+                        <!--<p><a href="#" class="alert-text-title-callback">Alert With Text and Title and Callback</a></p>-->
+                        <!--<p><a href="#" class="alert-text-callback">Alert With Text and Callback</a></p>-->
+                    <!--</div>-->
+                    <!--/*confrim*/<div class="content-block">-->
+                        <!--<p><a href="#" class="confirm-ok">Confirm with text and Ok callback</a></p>-->
+                        <!--<p><a href="#" class="confirm-ok-cancel">Confirm with text, Ok and Cancel callbacks</a></p>-->
+                        <!--<p><a href="#" class="confirm-title-ok">Confirm with text, title and Ok callback</a></p>-->
+                        <!--<p><a href="#" class="confirm-title-ok-cancel">Confirm with text, title, Ok and Cancel callback</a></p>-->
+                    <!--</div>-->
+                    <!--/*login*/<div class="content-block">-->
+                        <!--<p><a href="#" class="login-modal">Login Modal</a></p>-->
+                        <!--<p><a href="#" class="password-modal">Password Modal</a></p>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+<script type="text/javascript">
+    var myApp = new Framework7();
+
+    var $$ = Dom7;
+
+    /* modal
+    $$('.alert-text').on('click', function () {
+        myApp.alert('Here goes alert text');
+    });
+
+    $$('.alert-text-title').on('click', function () {
+        myApp.alert('Here goes alert text', 'Custom Title!');
+    });
+
+    $$('.alert-text-title-callback').on('click', function () {
+    myApp.alert('Here goes alert text', 'Custom Title!', function () {
+        myApp.alert('Button clicked!')
+    });
+    });
+     */
+
+    /* confirm
+    $$('.alert-text-callback').on('click', function () {
+    myApp.alert('Here goes alert text', function () {
+        myApp.alert('Button clicked!')
+    });
+    });
+
+    $$('.confirm-ok').on('click', function () {
+        myApp.confirm('Are you sure?', function () {
+            myApp.alert('You clicked Ok button');
+        });
+    });
+
+    $$('.confirm-ok-cancel').on('click', function () {
+        myApp.confirm('Are you sure?',
+                function () {
+                    myApp.alert('You clicked Ok button');
+                },
+                function () {
+                    myApp.alert('You clicked Cancel button');
+                }
+        );
+    });
+    $$('.confirm-title-ok').on('click', function () {
+        myApp.confirm('Are you sure?', 'Custom Title', function () {
+            myApp.alert('You clicked Ok button');
+        });
+    });
+    $$('.confirm-title-ok-cancel').on('click', function () {
+        myApp.confirm('Are you sure?', 'Custom Title',
+                function () {
+                    myApp.alert('You clicked Ok button');
+                },
+                function () {
+                    myApp.alert('You clicked Cancel button');
+                }
+        );
+    });
+    */
+
+    /* 登录框
+    $$('.login-modal').on('click', function () {
+        myApp.modalLogin('Authentication required', function (username, password) {
+            myApp.alert('Thank you! Username: ' + username + ', Password: ' + password);
+        });
+    });
+
+    $$('.password-modal').on('click', function () {
+        myApp.modalPassword('You password please:', function (password) {
+            myApp.alert('Thank you! Your password is: ' + password);
+        });
+    });
+    */
+</script>
+</html>

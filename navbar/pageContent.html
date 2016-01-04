@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>内容</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+</head>
+<body>
+<div class="views">
+    <div class="view">
+        <div class="pages">
+            <div data-page="home" class="page navbar-fixed">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center" style="left: 0px;">My App</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <p>This paragraph is outside of content block. Not cool, but useful for any custom elements with custom styling.</p>
+
+                    <!-- Content block -->
+                    <div class="content-block">
+                        <p>Here comes paragraph within content block. Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                    </div>
+
+                    <!-- We can wrap content with additional "content-block-inner" element for additional highlighting -->
+                    <div class="content-block">
+                        <div class="content-block-inner">Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>
+                    </div>
+
+                    <!-- Add ".content-block-title" to add block's title -->
+                    <div class="content-block-title">Content block title</div>
+                    <div class="content-block">
+                        <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                    </div>
+
+                    <div class="content-block-title">Another ultra long content block title</div>
+                    <div class="content-block">
+                        <div class="content-block-inner">
+                            <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                        </div>
+                    </div>
+
+                    <div class="content-block-title">Inset</div>
+                    <!-- Inset content block -->
+                    <div class="content-block inset">
+                        <div class="content-block-inner">
+                            <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                        </div>
+                    </div>
+
+                    <div class="content-block-title">Tablet Inset</div>
+                    <!-- This block will be inset only on tablets -->
+                    <div class="content-block tablet-inset">
+                        <div class="content-block-inner">
+                            <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+</html>

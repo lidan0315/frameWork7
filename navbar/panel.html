@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>侧栏</title>
+    <!--Android样式表-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.min.css">-->
+    <!--<link rel="stylesheet" href="../css/framework7.material.colors.min.css">-->
+    <!--Ios样式表-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+</head>
+<body>
+<!--知识点
+1、打开侧栏，需要添加"open-panel" 类，关闭侧栏，需要添加"close-panel"类
+2、指定哪个侧栏被开启/关闭,可以通过HTML元素上额外的属性data-panel="left"完成
+3、可以通过javascript来指定，myApp.openPanel(position) position:left或right；
+4、滑动屏幕打开侧栏:只有一个菜单能被设置成允许滑动屏幕打开 (左或右)。
+var myApp = new Framework7({
+    swipePanel: 'left'
+});
+-->
+<!-- Panels Overlay -->
+<div class="panel-overlay"></div>
+
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <p>Left Panel content here</p>
+        <!-- Click on link with "close-panel" class will close panel -->
+        <p><a href="#" class="close-panel">Close me</a></p>
+        <!-- Click on link with "open-panel" and data-panel="right" attribute will open Right panel -->
+        <p><a href="#" data-panel="right" class="open-panel">Open Right Panel</a></p>
+    </div>
+</div>
+
+<!-- Right Panel with Cover effect -->
+<div class="panel panel-right panel-cover">
+    <div class="content-block">
+        <p>Right Panel content here</p>
+        <!-- Click on link with "close-panel" class will close panel -->
+        <p><a href="#" class="close-panel">Close me</a></p>
+        <!-- Click on link with "open-panel" and data-panel="left" attribute will open Left panel -->
+        <p><a href="#" data-panel="left" class="open-panel">Open Left Panel</a></p>
+    </div>
+</div>
+<div class="views">
+    <div class="view">
+        <div class="pages">
+            <div data-page="home" class="page navbar-fixed">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center" style="left: 0px;">Panel Events</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="content-block">
+                        <!-- If no data-panel attribute, Left panel will be opened by default -->
+                        <p><a href="#" class="open-panel">Open Left Panel</a></p>
+                        <!-- Click on link with "open-panel" and data-panel="right" attribute will open Right panel -->
+                        <p><a href="#" data-panel="right" class="open-panel">Open Right Panel</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/framework7.min.js"></script>
+<script src="../js/my-app.js"></script>
+<script>
+//    var myApp = new Framework7();
+//
+//    var $$ = Dom7;
+//
+//    $$('.open-left-panel').on('click', function (e) {
+//        // 'left' position to open Left panel
+//        myApp.openPanel('left');
+//    });
+//
+//    $$('.open-right-panel').on('click', function (e) {
+//        // 'right' position to open Right panel
+//        myApp.openPanel('right');
+//    });
+//
+//    $$('.panel-close').on('click', function (e) {
+//        myApp.closePanel();
+//    });
+
+</script>
+</html>
